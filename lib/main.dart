@@ -3,16 +3,14 @@ import 'package:ballconnector/common/admob_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
-
 import 'models/game_state.dart';
-import 'widgets/game_board.dart';
-import 'widgets/hud_bar.dart';
 
 Future<void> main() async {
-  // ✅ Initialize AdMob
+
+  WidgetsFlutterBinding.ensureInitialized();
+
   await MobileAds.instance.initialize();
 
-  // ✅ Child-safe config (IMPORTANT)
   MobileAds.instance.updateRequestConfiguration(
     RequestConfiguration(
       tagForChildDirectedTreatment: TagForChildDirectedTreatment.yes,

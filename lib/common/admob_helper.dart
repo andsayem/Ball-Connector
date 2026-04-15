@@ -10,7 +10,7 @@ class AdmobHelper with WidgetsBindingObserver {
       "ca-app-pub-1195883693665145/8112066562";
   static const String rewardedAdUnitId =
       "ca-app-pub-1195883693665145/9109453466";
- 
+
   // ================= Interstitial =================
   static InterstitialAd? _interstitialAd;
   static bool suppressAppOpen = false;
@@ -250,12 +250,9 @@ class AdmobHelper with WidgetsBindingObserver {
     );
   }
 
-  // ================= App Open ================= 
-  static bool _isShowingAppOpen = false;
+  // ================= App Open =================
   static final Duration maxCacheDuration = const Duration(hours: 4);
- 
-   
- 
+
   // ================= Adaptive Banner =================
   static AdManagerBannerAd? _adaptiveBannerAd;
   static bool _isAdaptiveLoaded = false;
@@ -315,6 +312,13 @@ class AdmobHelper with WidgetsBindingObserver {
   static void disposeAds() {
     _interstitialAd?.dispose();
     _rewardedAd?.dispose();
-    _bannerAd?.dispose(); 
+    _bannerAd?.dispose();
   }
+
+
+
+
+  
 }
+
+
