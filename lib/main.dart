@@ -15,8 +15,13 @@ Future<void> main() async {
     RequestConfiguration(
       tagForChildDirectedTreatment: TagForChildDirectedTreatment.yes,
       maxAdContentRating: MaxAdContentRating.g,
+      testDeviceIds: const [
+        '78A9FB3953BDAFA8BB14B08C9F3943FC',
+      ],
     ),
   );
+
+  AdmobHelper.loadInterstitialAd();
 
   final adHelper = AdmobHelper();
   WidgetsBinding.instance.addObserver(adHelper);
